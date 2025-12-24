@@ -19,7 +19,7 @@ shortenBtn.addEventListener('click', async () => {
         const response = await fetch("https://api.tinyurl.com/create", {
             method: "POST",
             headers: {
-                "authorization": "bearer jgpXN9ZHEzijDrlx1yoCVtMVcHICjUH7HA6Mng9M8Rt0DHeJWirWYjaaDDEI",
+                "authorization": "bearer use_your_own_api_key_here",
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
