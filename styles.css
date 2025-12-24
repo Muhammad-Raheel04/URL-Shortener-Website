@@ -14,7 +14,7 @@ body {
     justify-content: center;
     align-items: center;
     color: #eaeaea;
-    padding:20px;
+    padding: 20px;
 }
 
 /* Main container */
@@ -27,13 +27,40 @@ body {
     border: 1px solid #1aff1a;
 }
 
-/* Heading */
-#container h1 {
-    text-align: center;
+/* Flex container for heading + logo */
+#header {
+    display: flex;
+    align-items: center;
+    /* Vertically center text with image */
+    justify-content: center;
+    /* Center horizontally inside #container */
+    gap: 12px;
+    /* Space between image and heading */
     margin-bottom: 20px;
+}
+
+/* Heading styling */
+#header h1 {
     color: #1aff1a;
     letter-spacing: 1px;
+    font-size: 28px;
 }
+
+/* Logo image styling */
+#header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    border: 2px solid #1aff1a;
+    box-shadow: 0 0 15px rgba(26, 255, 26, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#header img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(26, 255, 26, 0.8);
+}
+
 
 /* Input section */
 #inputSection label {
@@ -139,4 +166,23 @@ button {
 #visit:hover {
     background-color: #1aff1a;
     color: #000;
+}
+/* About Section */
+#about {
+    margin-top: 25px;
+    padding: 15px;
+    border-top: 1px solid #1aff1a; /* Matches your results section */
+    text-align: center;
+    font-style: italic;
+    font-size: 14px;
+    color: #9eff9e; /* Soft green for readability */
+    line-height: 1.5;
+    background-color: #0b0b0b; /* Match page background */
+    border-radius: 8px;
+}
+
+
+#about:hover {
+    box-shadow: 0 0 10px rgba(26, 255, 26, 0.3);
+    transition: box-shadow 0.3s ease;
 }

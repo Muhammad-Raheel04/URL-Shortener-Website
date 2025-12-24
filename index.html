@@ -4,23 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>URL Shortener</title>
+    <link rel="icon" type="image/png" href="URL Shortener Favicon.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <div id="container">
-        <h1>URL Shortener</h1>
+        <div id="header">
+            <img src="URL Shortener Favicon.png" alt="URL Shortener Favicon">
+            <h1>URL Shortener</h1>
+        </div>
         <div id="inputSection">
             <label for="LongUrlInput">Enter Long URL</label>
             <input type="text" id="LongUrlInput" placeholder="Enter URL">
-            
+
             <div id="resultsSection">
                 <h2>Shortend URL</h2>
                 <p id="shortenedURL">Your shortend URL will appear here</p>
                 <button id="shortenButton">Shorten URL</button>
                 <button id="copyButton">Copy to clipboard</button>
                 <button id="visit">Visit Shortened URL</button>
+            </div>
+            <div id="about">
+                <p><i>Give me a long url i will give a short version of it that will redirect to the same page</i></p>
             </div>
         </div>
     </div>
