@@ -1,0 +1,141 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* Page background */
+body {
+    background-color: #0b0b0b;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #eaeaea;
+}
+
+/* Main container */
+#container {
+    width: 420px;
+    background: #111;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.15);
+    border: 1px solid #1aff1a;
+}
+
+/* Heading */
+#container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1aff1a;
+    letter-spacing: 1px;
+}
+
+/* Input section */
+#inputSection label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #9eff9e;
+}
+
+#LongUrlInput {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #1aff1a;
+    background-color: #0b0b0b;
+    color: #ffffff;
+    outline: none;
+    font-size: 14px;
+}
+
+#LongUrlInput:focus,
+#LongUrlInput:active {
+    background-color: #0b0b0b;
+    color: #ffffff;
+    outline: none;
+}
+
+#LongUrlInput:-webkit-autofill,
+#LongUrlInput:-webkit-autofill:hover,
+#LongUrlInput:-webkit-autofill:focus,
+#LongUrlInput:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px #0b0b0b inset;
+    -webkit-text-fill-color: #ffffff;
+    transition: background-color 9999s ease-in-out 0s;
+}
+
+#LongUrlInput::placeholder {
+    color: #6f6f6f;
+}
+
+#LongUrlInput:focus {
+    box-shadow: 0 0 8px rgba(26, 255, 26, 0.6);
+}
+
+/* Results section */
+#resultsSection {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #1aff1a;
+}
+
+#resultsSection h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #1aff1a;
+}
+
+/* Shortened URL box */
+#shortenedURL {
+    background-color: #0b0b0b;
+    border: 1px dashed #1aff1a;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    word-break: break-all;
+    color: #6f6f6f;
+}
+
+
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Individual button styles */
+#shortenButton {
+    background-color: #1aff1a;
+    color: #000;
+}
+
+#shortenButton:hover {
+    background-color: #14cc14;
+}
+
+#copyButton,
+#visit {
+    background-color: transparent;
+    color: #1aff1a;
+    border: 1px solid #1aff1a;
+}
+
+#copyButton:hover,
+#visit:hover {
+    background-color: #1aff1a;
+    color: #000;
+}
