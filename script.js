@@ -45,7 +45,7 @@ shortenBtn.addEventListener('click', async () => {
 const copyBtn = document.getElementById("copyButton");
 copyBtn.addEventListener("click", () => {
     const textToCopy = shortenedURL.innerText;
-    if (textToCopy.includes("Error shortening") || textToCopy.includes("appear here")) {
+    if (textToCopy.includes("Error shortening") || textToCopy.includes("appear here") || textToCopy.includes("Please enter")) {
         alert("No valid URL to copy!");
         return;
     }
@@ -62,7 +62,7 @@ copyBtn.addEventListener("click", () => {
 const visitBtn = document.getElementById("visit");
 visitBtn.addEventListener("click", () => {
     const urlToVisit = shortenedURL.innerText;
-    if (urlToVisit.includes("Error shortening") || urlToVisit.includes("appear here")) {
+    if (urlToVisit.includes("Error shortening") || urlToVisit.includes("appear here") || urlToVisit.includes("Please enter")) {
         alert("No valid URL to visit!");
         return;
     }
