@@ -44,9 +44,13 @@ shortenBtn.addEventListener('click', async () => {
 
 const copyBtn = document.getElementById("copyButton");
 copyBtn.addEventListener("click", () => {
+    
     const textToCopy = shortenedURL.innerText;
     if (textToCopy.includes("Error shortening") || textToCopy.includes("appear here") || textToCopy.includes("Please enter")) {
-        alert("No valid URL to copy!");
+        copyBtn.innerText = "No valid URL to copy";
+        setTimeout(()=>{
+            copyBtn.innerText = "Copy URL";
+        }, 2000)
         return;
     }
 
