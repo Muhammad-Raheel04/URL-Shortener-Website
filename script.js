@@ -34,7 +34,7 @@ shortenBtn.addEventListener('click', async () => {
         shortenedURL.innerText = "Error shortening URL. Please try again.";
     }
     finally {
-        shortenBtn.innerText = "Shorten URl";
+        shortenBtn.innerText = "Shorten URL";
         shortenBtn.disabled = false;
         shortenBtn.style.cursor = "pointer";
         shortenBtn.style.opacity = "1";
@@ -44,7 +44,7 @@ shortenBtn.addEventListener('click', async () => {
 
 const copyBtn = document.getElementById("copyButton");
 copyBtn.addEventListener("click", () => {
-    
+
     const textToCopy = shortenedURL.innerText;
     if (textToCopy.includes("Error shortening") || textToCopy.includes("appear here") || textToCopy.includes("Please enter")) {
         copyBtn.innerText = "No valid URL to copy";
@@ -56,10 +56,16 @@ copyBtn.addEventListener("click", () => {
 
     navigator.clipboard.writeText(textToCopy)
         .then(() => {
-            alert("Copied to clipboard!");
+            copyBtn.innerText ="Copied!";
+            setTimeout(()=>{
+                copyBtn.innerText = "Copy URL";
+            },2000)
         })
         .catch((err) => {
-            alert("Failed to copy:");
+            copyBtn.innerText = "Failed to copy";
+            setTimeout(()=>{
+                copyBtn.innerText = "Copy URL";
+            },2000)
         })
 });
 
