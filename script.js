@@ -73,7 +73,11 @@ const visitBtn = document.getElementById("visit");
 visitBtn.addEventListener("click", () => {
     const urlToVisit = shortenedURL.innerText;
     if (urlToVisit.includes("Error shortening") || urlToVisit.includes("appear here") || urlToVisit.includes("Please enter")) {
-        alert("No valid URL to visit!");
+        // alert("No valid URL to visit!");
+        visitBtn.innerText = "No valid URL to visit";
+        setTimeout(()=>{
+            visitBtn.innerText = "Visit URL";
+        },2000)
         return;
     }
     window.open(urlToVisit, '_blank');
